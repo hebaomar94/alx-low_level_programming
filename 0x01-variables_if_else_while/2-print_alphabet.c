@@ -6,14 +6,23 @@
  * Return: Always 0 (Sucess/correct)
  */
 
-int main()
 {
+	char lower_case;
 
-	    for(int x = 'A'; x <= 'Z'; x++)
+	char upper_case;
+
+
+	for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
 {
-				        x = tolower(x);
-					putchar(x);
+		putchar(lower_case);
 }
 
-	        return 0;
+	for (upper_case = 'A'; upper_case <= 'Z'; upper_case++)
+{
+		putchar(upper_case);
+}
+
+	putchar ('\n');
+
+	return (0)
 }
