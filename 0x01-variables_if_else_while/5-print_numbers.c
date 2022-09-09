@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-/*
- * main entry level
- **
- *Return: Always 0 (success/correct) 
+/**
+ * main - Entry point
+ *  *
+ * Return: Always 0 (success/correct)
  */
 
 int main(void)
