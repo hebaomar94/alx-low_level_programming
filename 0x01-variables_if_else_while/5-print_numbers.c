@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 /*
  * main entry level
- * *
- * return 0 
+ **
+ * Return: Always 0 (success/correct) 
  */
 int main(void)
 
