@@ -7,15 +7,16 @@
 int main(void)
 
 {
-	int i 
-		;
-	for ( i =0 ; i < 10 ; i++)
+	int i;
+
+
+	for (i = 0 ; i < 10; i++)
+
 	{
-		printf("%d",i);
+		printf("%i", i);
 	}
 
 	printf("\n");
 
-return 0
-
+	return (0);
 }
