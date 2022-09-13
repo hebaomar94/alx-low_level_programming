@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * main - check the code.
- *   *
+ *  * _islower - Short description, single line
+ *   * @c: contains value to be compared
+ *
  * Return: Always 0.
  */
 
-int main(void)
+int _islower(int c)
+
+
+
 {
-
-
-
 	if (c > 'a' && c < 'z')
 
 	{
