@@ -53,7 +53,3 @@ void jack_bauer(void)
 
 
 }
-
-Footer
-
-© 202
