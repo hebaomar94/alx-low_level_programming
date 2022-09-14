@@ -9,7 +9,6 @@
 int main(void)
 
 {
-
 	int i;
 
 
@@ -27,7 +26,7 @@ int main(void)
 	 *{
 	 *Infinite loop - No increase of variable
 	 *
-	 * *putchar(i);
+	 *putchar(i);
 	 * }
 	 */
 
