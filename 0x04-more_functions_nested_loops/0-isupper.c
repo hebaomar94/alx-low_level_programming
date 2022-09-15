@@ -7,17 +7,27 @@
  */
 
 int _isupper(int c)
-{
-	for(i > "A" ; i < "Z" ; i++)
-	{
-		if(i == "c" )
-		
-		_putchar(1);
 
-	else 
+{
+
+	if (c >= 'A' && c <= 'Z')
+
 	{
-		_putchar(0);
+
+		return (1);
+
 	}
-	
-	_putchar("\n");
+
+
+
+	else
+
+	{
+
+		return (0);
+
 	}
+
+
+
+
