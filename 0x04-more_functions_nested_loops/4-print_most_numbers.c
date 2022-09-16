@@ -12,21 +12,24 @@ void print_most_numbers(void)
 	int i;
 	int i =0 ;
 
-	while(i<10)
+le (i < 10)
 
-	{
-		if ( i == 2);
-		{
-			continue ;
-		}
+{
 
-		if (i == 4);
-		{
-			continue ;
-		}
+if (i != 2 && i != 4)
 
-		_putchar (i + '0');
-		i++;
-	}
-		_putchar ('\n');
-	}
+{
+
+_putchar (i + '0');
+
+}
+
+i++;
+
+}
+
+
+
+_putchar ("\n);
+
+}
