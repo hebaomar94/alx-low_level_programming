@@ -6,13 +6,20 @@
  */
 
 void print_numbers(void)
+i = 0;
+
+while (i < 10)
+
 {
-	int i ;
 
-	for (i > 0 ; i < 10 ; i++ ) 
-	{
-		_putchar("%d",i);
+	_putchar (i + '0');
 
-	}
-	_putchar ("\n");
+	i++;
+
+}
+
+
+
+_putchar ('\n');
+
 }
