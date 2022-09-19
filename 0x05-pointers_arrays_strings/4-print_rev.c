@@ -4,29 +4,37 @@
 
 /**
  * print_rev - prints a string in reverse
- * @s: string parameter input
+i * @s: string parameter input
  * Return: Nothing
  */
 
 {
-		int index;
+	int length, last;
 
 
 
-			/*finds the length of string without null character*/
+		length = 0;
 
-			for (index = 0; s[index] != '\0'; ++index)
+			while (s[length] != '\0')
 
-						;
+					{
+
+								length++;
+
+									}
 
 
 
-				/*print char from the last index as you decrement*/
+				last = length - 1;
 
-				for (--index; index >= 0; --index)
+					for (; last >= 0; last--)
 
-							_putchar(s[index]);
+							{
 
-					_putchar('\n');
+										_putchar(s[last]);
+
+											}
+
+						_putchar('\n');
 
 }
