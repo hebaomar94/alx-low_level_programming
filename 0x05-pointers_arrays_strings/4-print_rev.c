@@ -1,40 +1,29 @@
 #include"main.h"
 
 
-
 /**
  * print_rev - prints a string in reverse
-i * @s: string parameter input
+ * @s: string parameter input
  * Return: Nothing
  */
 
+
+
+void print_rev(char *s)
+
 {
-	int length, last;
+
+		int index;
 
 
-
-		length = 0;
-
-			while (s[length] != '\0')
-
-					{
-
-								length++;
-
-									}
+			for (index = 0; s[index] != '\0'; ++index
+						;
 
 
+				for (--index; index >= 0; --index)
 
-				last = length - 1;
+							_putchar(s[index]);
 
-					for (; last >= 0; last--)
-
-							{
-
-										_putchar(s[last]);
-
-											}
-
-						_putchar('\n');
+					_putchar('\n');
 
 }
