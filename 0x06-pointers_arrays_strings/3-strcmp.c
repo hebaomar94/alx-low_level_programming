@@ -7,8 +7,6 @@
  *Return: dest
  */
 
-
-
 int _strcmp(char *s1, char *s2)
 
 
@@ -35,9 +33,8 @@ int _strcmp(char *s1, char *s2)
 
 	}
 
+
+
 	return (*str_one - *str_two);
+
 }
-
-Footer
-
-© 2022 Git
