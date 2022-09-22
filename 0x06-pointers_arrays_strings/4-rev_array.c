@@ -11,8 +11,6 @@
 
 void reverse_array(int *a, int n)
 
-
-
 {
 
 	int *start_c, *end_c, c;
@@ -42,18 +40,9 @@ void reverse_array(int *a, int n)
 
 
 
-
-
-
-
-
 	for (i = 0; i < n / 2; i++)
 
 	{
-
-
-
-
 
 		c = *end_c;
 
