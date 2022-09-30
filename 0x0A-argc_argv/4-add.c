@@ -1,74 +1,60 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 
 
 /**
  *
- *  * main - adds positive numbers
+ *  * main - adds numbers
  *
- *   * @argc: number of arguments
+ *   * @argc: number of arguments passed to the function
  *
- *    * @argv: array containing arguments passed to the program
+ *    * @argv: argument vector of pointers to strings
  *
  *     *
  *
- *      * Return: 0 if no number is passed as argument
+ *      * Return: 0 if no errors, else 1
  *
- *       * 	   1 and prints Error if one number contains a symbol
- *
- *        */
-
-
+ *       */
 
 int main(int argc, char *argv[])
 
 {
 
-		int i, sum = 0;
+		int a = 0, i, j;
 
 
 
-			if (argc == 1)
+			for (i = 1; i < argc; i++)
 
-					{
+		{
+		  for (j = 0; argv[i][j]; j++)
+											          {
+													if (isdigit(argv[i][j]) == 0)
 
-								printf("0\n");
+													{
 
-									}
+																								puts("Error");
 
-				else
-
-						{
-
-									for (i = 1; i < argc; i++)
-
-												{
-
-																if ((argv[i] < '0' || *argv[i] > '9'))
-
-																				{
-
-																									printf("Error\n");
-
-																													return (1);
-
-																																}
-
-																			else
-
-																							{
-
-																												sum += atoi(argv[i]);
+																												return (1);
 
 																															}
 
-																					}
+													}
 
-											printf("%d\n", sum);
+			}
 
-												}
+				for (i = 1; i < argc; i++)
 
-					return (0);
+						{
+
+									a += atoi(argv[i]);
+
+										}
+
+					printf("%d\n", a);
+
+						return (0);
 
 }
