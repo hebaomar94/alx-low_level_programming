@@ -12,7 +12,7 @@ void close_file(int fd);
  * Return: A pointer to the newly-allocated buffer.
  */
 
-char*create_buffer(char *file)
+char *create_buffer(char *file)
 {
 	char *buffer;
 	buffer = malloc(sizeof(char) * 1024);
@@ -39,12 +39,18 @@ void close_file(int fd)
 		exit(100);
 	}
 }
+
 /**
  * main - copies the contents of a file to another file.
  * @argc: the number of arguments supplies to the program
  * @argv: An array of pointers to the arguments.
  *
- * Return: 0 on success
+ * Return: 0 on succes
+ * 
+ * Description: if the argument count is incorrect - exit code 97.
+ *              if file_from does not exit or cannot be read - exit code 96.
+ *              if file_to cannot be created or written to - exit code 99.
+ *              if file_to or file_from cannot be closed - exit code 100.
  */
 int main(int argc, char *argv[])
 {
@@ -62,7 +68,7 @@ int main(int argc, char *argv[])
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	
 	do {
-		if (from == -1 || r== -1)
+		if (from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,"Error: can't read from file %s\n", argv[1]);
 			free(buffer);
@@ -72,7 +78,7 @@ int main(int argc, char *argv[])
 		if (to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,"Error: can't read from file %s\n", argv
-[1]);                                                                                 
+[2]);                                                                                 
 			  free(buffer);                                                                         exit(99);
 		}
 
