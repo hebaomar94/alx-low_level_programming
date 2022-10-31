@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *creat_buffer(char *file);
+char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	buffer = creat_buffer(argv[2]);
+	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
@@ -70,16 +70,17 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO,
+					"Error: can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
 		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
-			dprintf(STDERR_FILENO,"Error: can't read from file %s\n", argv
-[2]);                                                                                 
-			  free(buffer);                                                                         exit(99);
+			dprintf(STDERR_FILENO,
+				"Error: can't read from file %s\n", argv[2]);                                                                                 
+			  free(buffer);                                                                         exit(98);
 		}
 
 		r = read(from, buffer, 1024);
